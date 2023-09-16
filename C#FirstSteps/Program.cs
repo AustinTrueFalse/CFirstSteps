@@ -1,16 +1,20 @@
-﻿internal class Program
+﻿using System.Xml.Linq;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
-        string MyName = "Максим";
-        byte Age = 26;
-        bool Pet = false;
-        float ShoeSize = 44;
 
-        Console.WriteLine("Меня зовут {0}", MyName);
-        Console.WriteLine("My age is {0}", Age);
-        Console.WriteLine("Do I have a pet? {0}", Pet);
-        Console.WriteLine("My shoe size is {0}", ShoeSize);
+        Console.Write("Enter your name: ");
+        var name = Console.ReadLine();
+        Console.Write("Enter your age: ");
+        var age = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Your name is {0} and age is {1}", name, age);
+        Console.Write("Enter your birthday: ");
+        var birthdate = Console.ReadLine();
+        Console.WriteLine("Your birthday is {0}", birthdate);
 
     }
+
+
 }
